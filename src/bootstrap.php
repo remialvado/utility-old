@@ -10,7 +10,7 @@ use Titon\Utility\Hash;
 use Titon\Utility\Inflector;
 use Titon\Utility\Path;
 use Titon\Utility\Sanitize;
-use Titon\Utility\String;
+use Titon\Utility\StringUtil;
 
 /**
  * @see Titon\Utility\Hash::depth()
@@ -143,7 +143,7 @@ if (!function_exists('array_some')) {
  */
 if (!function_exists('str_compare')) {
     function str_compare($string, $value, $strict = true, $length = 0) {
-        return String::compare($string, $value, $strict, $length);
+        return StringUtil::compare($string, $value, $strict, $length);
     }
 }
 
@@ -152,7 +152,7 @@ if (!function_exists('str_compare')) {
  */
 if (!function_exists('str_ends_with')) {
     function str_ends_with($string, $needle, $strict = true) {
-        return String::endsWith($string, $needle, $strict);
+        return StringUtil::endsWith($string, $needle, $strict);
     }
 }
 
@@ -161,7 +161,7 @@ if (!function_exists('str_ends_with')) {
  */
 if (!function_exists('str_generate')) {
     function str_generate($length, $seed = String::ALNUM) {
-        return String::generate($length, $seed);
+        return StringUtil::generate($length, $seed);
     }
 }
 
@@ -170,7 +170,7 @@ if (!function_exists('str_generate')) {
  */
 if (!function_exists('str_insert')) {
     function str_insert($string, array $data, array $options = array()) {
-        return String::insert($string, $data, $options);
+        return StringUtil::insert($string, $data, $options);
     }
 }
 
@@ -179,7 +179,7 @@ if (!function_exists('str_insert')) {
  */
 if (!function_exists('str_listing')) {
     function str_listing($items, $glue = ' &amp; ', $sep = ', ') {
-        return String::listing($items, $glue, $sep);
+        return StringUtil::listing($items, $glue, $sep);
     }
 }
 
@@ -188,7 +188,7 @@ if (!function_exists('str_listing')) {
  */
 if (!function_exists('str_shorten')) {
     function str_shorten($string, $limit = 25, $glue = ' &hellip; ') {
-        return String::shorten($string, $limit, $glue);
+        return StringUtil::shorten($string, $limit, $glue);
     }
 }
 
@@ -197,7 +197,7 @@ if (!function_exists('str_shorten')) {
  */
 if (!function_exists('str_starts_with')) {
     function str_starts_with($string, $needle, $strict = true) {
-        return String::startsWith($string, $needle, $strict);
+        return StringUtil::startsWith($string, $needle, $strict);
     }
 }
 
@@ -206,7 +206,7 @@ if (!function_exists('str_starts_with')) {
  */
 if (!function_exists('str_truncate')) {
     function str_truncate($string, $limit = 25, array $options = array()) {
-        return String::truncate($string, $limit, $options);
+        return StringUtil::truncate($string, $limit, $options);
     }
 }
 
