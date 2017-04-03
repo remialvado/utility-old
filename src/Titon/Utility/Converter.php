@@ -438,7 +438,7 @@ class Converter extends Macro {
             $children = $node->children();
 
             if (!isset($array[$element])) {
-                $array[$element] = '';
+                $array[$element] = [];
             }
 
             if (!$node->attributes() || $format === static::XML_NONE) {
